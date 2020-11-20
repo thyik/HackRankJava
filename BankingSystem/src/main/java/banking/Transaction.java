@@ -39,6 +39,6 @@ public class Transaction implements TransactionInterface {
 
 	public boolean debit(double amount) {
 		// complete the function
-        return this.bank.debit(this.accountNumber, amount);;
+        return this.bank.debit(this.accountNumber, amount);
 	}
 }
