@@ -48,12 +48,12 @@ public abstract class Account implements AccountInterface {
 
 	public void creditAccount(double amount) {
 		// complete the function
-		this.balance -= amount;
+		this.balance += amount;
 	}
 
 	public boolean debitAccount(double amount) {
 		// complete the function
-		this.balance += amount;
+		this.balance -= amount;
 		return true;
 	}
 }
