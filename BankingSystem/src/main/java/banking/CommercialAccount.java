@@ -14,7 +14,7 @@ public class CommercialAccount extends Account  {
 
 	public CommercialAccount(Company company, Long accountNumber, int pin, double startingDeposit) {
 		// complete the function
-		super(new AccountHolder(accountNumber), accountNumber, pin, startingDeposit);
+		super(company, accountNumber, pin, startingDeposit);
 	}
 
 	/**
