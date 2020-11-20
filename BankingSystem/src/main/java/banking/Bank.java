@@ -23,14 +23,14 @@ public class Bank implements BankInterface {
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
 		// complete the function
 		uniqueNUmber++;
-		accounts.put(uniqueNUmber, new CommercialAccount(company, company.getIdNumber(), pin,startingDeposit));
+		accounts.put(uniqueNUmber, new CommercialAccount(company, uniqueNUmber, pin,startingDeposit));
 		return uniqueNUmber;
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
 		// complete the function
 		uniqueNUmber++;
-		accounts.put(uniqueNUmber, new ConsumerAccount(person, person.getIdNumber(), pin,startingDeposit));
+		accounts.put(uniqueNUmber, new ConsumerAccount(person, uniqueNUmber, pin,startingDeposit));
 		return uniqueNUmber;
 	}
 
