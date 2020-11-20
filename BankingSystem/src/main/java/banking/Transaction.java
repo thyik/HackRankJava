@@ -25,6 +25,12 @@ public class Transaction implements TransactionInterface {
 		// complete the function
 		this.bank = bank;
 		this.accountNumber = accountNumber;
+
+		if(!bank.authenticateUser(accountNumber, attemptedPin))
+		{
+			throw new Exception("Unknwon Pin");
+		}
+
 	}
 
 	public double getBalance() {
