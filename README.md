@@ -6,3 +6,6 @@
   ```
   $ mvn clean test
   ```
+  
+  Class Diagram
+  ![UML](./BankingSystem.png)
