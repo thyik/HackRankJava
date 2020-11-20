@@ -21,6 +21,7 @@ public class CommercialAccount  {
 	 */
 	protected void addAuthorizedUser(Person person) {
 		// complete the function
+		authorizedUsers.add(person);
 	}
 
 	/**
@@ -29,6 +30,6 @@ public class CommercialAccount  {
 	 */
 	public boolean isAuthorizedUser(Person person) {
 		// complete the function
-        return true;
+        return authorizedUsers.contains(person);
 	}
 }
