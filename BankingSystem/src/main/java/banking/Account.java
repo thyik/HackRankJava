@@ -53,6 +53,9 @@ public abstract class Account implements AccountInterface {
 
 	public boolean debitAccount(double amount) {
 		// complete the function
+		if (balance < amount)
+			return false;
+			
 		this.balance -= amount;
 		return true;
 	}
