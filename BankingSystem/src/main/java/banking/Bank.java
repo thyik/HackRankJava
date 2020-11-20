@@ -8,7 +8,8 @@ import java.util.LinkedHashMap;
  */
 public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
-
+	Long uniqueNumber = 0;
+	
 	public Bank() {
 		// complete the function
 		accounts = new LinkedHashMap<Long, Account>();
@@ -21,14 +22,16 @@ public class Bank implements BankInterface {
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
 		// complete the function
-
-		//accounts.put()
-        return -1L;
+		uniqueNumber++;
+		accounts.put(uniqueNumber, new Account(person, uniqueNumber, pin,startingDeposit));
+        return uniqueNumber;
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
 		// complete the function
-        return -1L;
+		//uniqueNumber++;
+		//accounts.put(uniqueNumber, new CommercialAccount(person, uniqueNumber, pin,startingDeposit));
+		return uniqueNumber;
 	}
 
 	public boolean authenticateUser(Long accountNumber, int pin) {
